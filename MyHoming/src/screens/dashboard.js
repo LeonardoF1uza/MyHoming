@@ -4,8 +4,6 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import { Text, View, ScrollView, Image, Pressable } from "react-native";
 
 import {styles} from "./../styles/css_light_mode.js";
-import { ScrollViewBase } from "react-native";
-import { Icon } from '@rneui/themed';
 
 
 export default function Dashboard() {
@@ -17,7 +15,7 @@ export default function Dashboard() {
         <SafeAreaProvider style={styles.background}>
             <StatusBar style="ligth" />
             <ScrollView>
-                <View>
+                <View style={styles.topBar}>
                     <Text>{houseName}</Text>
                     <Text>{houseId}</Text>
                 </View>
@@ -54,11 +52,15 @@ export default function Dashboard() {
                                 <Text>Gonçalo Dias</Text>
                             </View>
                     </ScrollView>
-                    <View>
-                        <View>Carolina --> Tiago  </View>
-                        <View>Carolina --> Sara</View>
-                        <View>Gonçalo --> Sara</View>
-                    </View>
+
+                    <View style={styles.caedPayments}>
+                                <Image style={styles.imageMembers}
+                                    source={require("./../resources/images/inclino4.jpg")}
+                                    resizeMode="cover"
+                                />
+                                <Text>Gonçalo Dias</Text>
+                            </View>
+                    
                 </View>
 
 
