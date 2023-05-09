@@ -1,6 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Dashboard from './src/screens/dashboard';
+import Login from './src/screens/Login';
+import List from './src/screens/List';
+
+
 
 export default function App() {
   return (

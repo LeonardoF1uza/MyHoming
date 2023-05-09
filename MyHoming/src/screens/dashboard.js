@@ -18,17 +18,17 @@ export default function Dashboard() {
             <StatusBar style="ligth" />
             <ScrollView>
                     <Header
-                        style={styles.Header}
+                        style={styles.header}
                         placement="left"
-                        leftComponent={{ text: houseName}}
-                        rightComponent={{ text: houseId}}
+                        leftComponent={{ text: houseName, style:  styles.headerText  }}
+                        rightComponent={{ text: houseId, style:  styles.headerSubtext  }}
                         
                     />
                 <View style={styles.topBar}>
                     
                 </View>
                 <View>
-                    <Text>Inquilinos</Text>
+                    <Text style = {styles.sectionTitle2}>Inquilinos</Text>
                     <ScrollView
                         horizontal={true}>
                             <View style={styles.cardMembers}>
@@ -60,6 +60,9 @@ export default function Dashboard() {
                                 <Text>Gonçalo Dias</Text>
                             </View>
                     </ScrollView>
+
+                    <Text style = {styles.sectionTitle2}>acertos</Text>
+
 
                     <View style={styles.caedPayments}>
                                 <Image style={styles.imageMembers}
