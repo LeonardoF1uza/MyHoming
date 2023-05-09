@@ -2,6 +2,8 @@ import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { Text, View, ScrollView, Image, Pressable } from "react-native";
+import { Header } from 'react-native-elements';
+
 
 import {styles} from "./../styles/css_light_mode.js";
 
@@ -15,9 +17,15 @@ export default function Dashboard() {
         <SafeAreaProvider style={styles.background}>
             <StatusBar style="ligth" />
             <ScrollView>
+                    <Header
+                        style={styles.Header}
+                        placement="left"
+                        leftComponent={{ text: houseName}}
+                        rightComponent={{ text: houseId}}
+                        
+                    />
                 <View style={styles.topBar}>
-                    <Text>{houseName}</Text>
-                    <Text>{houseId}</Text>
+                    
                 </View>
                 <View>
                     <Text>Inquilinos</Text>

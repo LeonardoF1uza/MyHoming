@@ -4,18 +4,16 @@ import { StyleSheet } from "react-native";
 import * as CONST from "./../variables/constants.js";
 
 export const styles = StyleSheet.create({
-        topBar:{
-        
-    },
-    myHoming:{
-        textDecorationStyle : "solid",
+        Headers:{
+            margin: 0,
+            padding: 0,
+            border: 0,
 
+    
     },
-    myHomingId:{
 
-    },
     background: {
-        paddingTop: 40,
+        paddingTop: 35,
 
         color: CONST.whiteColor,
     },
