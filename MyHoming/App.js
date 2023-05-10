@@ -3,12 +3,15 @@ import { StyleSheet, Text, View } from 'react-native';
 import Dashboard from './src/screens/dashboard';
 import Login from './src/screens/Login';
 import List from './src/screens/List';
+import Balance from './src/screens/Balance';
+
 
 
 
 export default function App() {
   return (
     <Dashboard/>
+    
   );
 }
 
