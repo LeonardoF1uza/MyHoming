@@ -5,20 +5,46 @@ import * as CONST from "./../variables/constants.js";
 
 export const styles = StyleSheet.create({
     
+
+    // navbar
+/*
+    navbar: {
+        backgroundColor: '#f2f2f2',
+        height: 60,
+        borderBottomWidth: 1,
+        borderBottomColor: '#ccc',
+        positionRelative: "down"
+        
+      },
+      navbarText : {
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: '#333',
+      },
+
+<View style={styles.nameHouseId}>
+      <Text>{houseName}</Text>
+      <Text>{houseId}</Text>
+  </View>
+
+
+      */
+      
+
     //dashboard
     header: {
-        flexDirection:'column',
+        flexDirection:'row',
         paddingLeft: 20,
         paddingRight: 20,
         paddingBottom: 10,
         backgroundColor: "#000"
     },
+    nameHouseId:{
+    },
     headerText:{
         fontSize: 24,
         paddingBottom: 10,
-        text: "center",
         fontWeight: 'bold',
-        flexDirection: 'row',
     },
     headerSubtext:{
         fontSize: 14,
@@ -31,12 +57,11 @@ export const styles = StyleSheet.create({
         marginTop: 'auto',
         marginBottom: 0
     },
-    sectionTitle2: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        flexDirection: 'row',
-        marginRight: 10,
-        margin:10
+    title: {
+        fontSize: CONST.subtitleSize,
+        fontWeight: '600',
+        marginBottom: 10,
+        marginTop: 10,
     },
 
     background: {
@@ -58,29 +83,58 @@ export const styles = StyleSheet.create({
 
     },
 
-
-    //login
-
-
-    caedPayments: {
+    cardPayments: {
         padding: 20,
         margin: 10,
         marginRight: 5,
         borderColor: CONST.blackColor,
         borderRadius: 10,
         borderWidth: 1,
+        
     },
+    addExpense: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        marginBottom: 20,
+        marginTop: 20,
+    },
+    linePayments: {
+        flexDirection: 'row',
+    },
+    arrowPayments: {
+
+    },
+    addExpenseButton: {
+        backgroundColor: CONST.lightBlue,
+        borderRadius: 12,
+        paddingTop: 12,
+        paddingBottom: 12,
+        paddingLeft: 20,
+        paddingRight: 20,
+        flexDirection: 'row'
+    },
+    addExpenseText: {
+        marginLeft: 10,
+        fontWeight: '600',
+        fontSize: CONST.buttonTextSize
+    },
+
+    //login
+
+
+
     container: {
         flex: 1,
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
     },
-    title: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        marginBottom: 30,
-    },
+    // title: {
+    //     fontSize: 24,
+    //     fontWeight: 'bold',
+    //     marginBottom: 30,
+    // },
     inputContainer: {
         width: '80%',
         marginBottom: 20,
