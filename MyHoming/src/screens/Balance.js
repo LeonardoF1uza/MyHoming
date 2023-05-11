@@ -30,8 +30,10 @@ function Balance(props){
 
             </View>
             
-       
+            <TouchableNativeFeedback onPress={() => navigation.navigate('dashboard')}>
+
             <Image style={styles.returnIcon} source={{uri:"https://icon-library.com/images/return-icon-png/return-icon-png-3.jpg"}}></Image>
+            </TouchableNativeFeedback>  
             
        
         </View>

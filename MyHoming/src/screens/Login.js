@@ -12,7 +12,7 @@ const Login = ({ navigation }) => {
     // Handle login logic here
     // For example, you could check if the username and password are correct and navigate to the next screen if they are
     if (username === 'User' && password === 'User') {
-      navigation.navigate('List');
+      navigation.navigate('dashboard');
     } else {
       alert('Invalid username or password. Please try again.');
     }
