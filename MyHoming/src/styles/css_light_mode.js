@@ -84,6 +84,50 @@ export const styles = StyleSheet.create({
     },
 
     cardPayments: {
+<<<<<<< HEAD
+=======
+        padding: 20,
+        margin: 10,
+        marginRight: 5,
+        borderColor: CONST.blackColor,
+        borderRadius: 10,
+        borderWidth: 1,
+
+    },
+    addExpense: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        marginBottom: 20,
+        marginTop: 20,
+    },
+    linePayments: {
+        flexDirection: 'row',
+    },
+    arrowPayments: {
+
+    },
+    addExpenseButton: {
+        backgroundColor: CONST.lightBlue,
+        borderRadius: 12,
+        paddingTop: 12,
+        paddingBottom: 12,
+        paddingLeft: 20,
+        paddingRight: 20,
+        flexDirection: 'row'
+    },
+    addExpenseText: {
+        marginLeft: 10,
+        fontWeight: '600',
+        fontSize: CONST.buttonTextSize
+    },
+
+
+    //login
+
+
+    caedPayments: {
+>>>>>>> 3a12db79c40c43493d8834f366a05d5c634d1427
         padding: 20,
         margin: 10,
         marginRight: 5,
