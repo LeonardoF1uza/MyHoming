@@ -11,7 +11,7 @@ const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <Dashboard/>
+    <Balance/>
 /*=======
     <NavigationContainer>
       <Stack.Navigator>

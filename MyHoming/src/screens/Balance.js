@@ -1,74 +1,99 @@
 import React from "react";
-import { Image, StyleSheet, View,Text } from "react-native";
-
+import { StyleSheet, View,Text,Alert} from "react-native";
+import { styles } from "./../styles/css_light_mode.js";
+import { FontAwesome } from 'react-native-vector-icons';
 
 function Balance(props){
     return(
-        <View style={styles.container}>
+        <View style={styles.container2}>
+
            
-            <View style={styles.valorContainer}>
-                <Text style={styles.Valor}>20.00€</Text>
+            <View style={styles.tasksWrapper}>
+                    <View style={styles.header}>
+                        <Text style={styles.sectionTitle}>Acertos</Text>
+                        <FontAwesome name='money' size={24} color='black' marginTop={5}/>
+                    </View>
+
+                        <View style={sty.valorContainer}>
+                            <Text style={sty.Balanco}>   
+                                <Text>Receber:</Text>
+                                <Text style={sty.ValorPositivo}>25.00</Text>
+                                <Text>€</Text>
+                            </Text> 
+                            <Text style={sty.Balanco}>   
+                                <Text>Pagar:</Text>
+                                <Text style={sty.ValorNegativo}>-5.00</Text>
+                                <Text>€</Text>
+                            </Text> 
+                        </View>
+                        <View style={sty.pessoaContainer}>
+                            <Text style={sty.Pessoa}>
+                                <FontAwesome.Button name="check-square" backgroundColor="#3b5998" onPress={() => Alert.alert('Resolved')}>
+                                </FontAwesome.Button>
+                                <Text> Carolina Matias</Text>
+                                <Text style={sty.ValorPositivo} >   15.00€</Text>
+                            </Text>
+                            
+                            <Text/>
+                            <Text/>
+                            
+                            <Text style={sty.Pessoa}>
+                                <FontAwesome.Button name="check-square" backgroundColor="#3b5998" onPress={() => Alert.alert('Resolved')}>
+                                </FontAwesome.Button>
+                                <Text> Tiago Bartolomeu</Text>
+                                <Text style={sty.ValorPositivo} >   10.00€</Text>
+                            </Text>
+                            
+                            <Text/>
+                            <Text/>
+                        
+                            <Text style={sty.Pessoa}>
+                                <FontAwesome.Button name="check-square" backgroundColor="#3b5998" onPress={() => Alert.alert('Resolved')}>
+                                </FontAwesome.Button>
+                                <Text> Gonçalo Dias</Text>
+                                <Text style={sty.ValorNegativo} >   -5.00€</Text>
+                            </Text>
+                         </View>
             </View>
-
-            <View style={styles.pessoaContainer}>
             
-                <Text style={styles.Pessoa}> Carolina Matias</Text>
-                <Text> 15.00€</Text>
-
-                <Text/>
-                <Text/>
-
-                <Text style={styles.Pessoa}> Tiago Bartolomeu</Text>
-                <Text> 10.00€</Text>
-
-                <Text/>
-                <Text/>
-
-                <Text style={styles.Pessoa}> Gonçalo Dias</Text>
-                <Text> -5.00€</Text>
-
-
-            </View>
-            
-            <TouchableNativeFeedback onPress={() => navigation.navigate('dashboard')}>
-
-            <Image style={styles.returnIcon} source={{uri:"https://icon-library.com/images/return-icon-png/return-icon-png-3.jpg"}}></Image>
-            </TouchableNativeFeedback>  
-            
-       
         </View>
 
     );
 }
 
-const styles=StyleSheet.create({
-    container:{
-        backgroundColor:"grey",
-        flex:1,
-        justifyContent:"flex-end",
-        alignItems:"center"
-    },
+const sty=StyleSheet.create({
+   
     valorContainer:{
         position:"absolute",
         
-        top:130,
+        top:140,
         left:30,
         
     },
-    Valor:{
-        fontSize:50,
+    Balanco:{
+        fontSize:20,
+
+
+    },
+    ValorPositivo:{
+        
         color:"green"
         
     },
+    ValorNegativo:{
+        
+        color:"red"
+        
+    },
     Pessoa:{
-        fontSize:30,
+        fontSize:20,
        
         
     },
     pessoaContainer:{
         position:"absolute",
         top:250,
-        left:40,
+        left:30,
       
     
        

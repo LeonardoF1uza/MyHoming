@@ -84,8 +84,6 @@ export const styles = StyleSheet.create({
     },
 
     cardPayments: {
-<<<<<<< HEAD
-=======
         padding: 20,
         margin: 10,
         marginRight: 5,
@@ -127,7 +125,6 @@ export const styles = StyleSheet.create({
 
 
     caedPayments: {
->>>>>>> 3a12db79c40c43493d8834f366a05d5c634d1427
         padding: 20,
         margin: 10,
         marginRight: 5,
