@@ -1,17 +1,27 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import List from './src/screens/List';
+import List from './app/components/List';
+import Login from './app/components/Login';
+import Dashboard from './app/components/Dashboard';
+import Calendar from './app/components/Calendar';
+import Ledger from './app/components/Ledger';
 
-import Login from './src/screens/Login';
-import Dashboard from './src/screens/dashboard';
-import Balance from './src/screens/Balance';
+
 
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <Dashboard/>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen  name="Dashboard" component={Dashboard} />
+        <Stack.Screen name="List" component={List} />
+        <Stack.Screen name="Calendar" component={Calendar} />
+        <Stack.Screen name="Ledger" component={Ledger} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
