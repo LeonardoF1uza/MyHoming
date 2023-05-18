@@ -1,20 +1,32 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { Text, View, ScrollView, Image, Container, Pressable } from "react-native";
-import { Header } from 'react-native-elements';
+import { Text, View, ScrollView, Image, Container, Pressable, Button } from "react-native";
+import { Header } from "react-native-elements";
 import {
     MoneyRecive, ShoppingCart, ArrowRight
 } from "iconsax-react-native";
 
 import { styles } from "./../styles/css_light_mode.js";
-import * as CONST from "./../variables/constants.js";
+import * as CONST from "./../styles/constants.js";
 
 
-export default function Dashboard() {
+const Dashboard = ({ navigation }) => {
     const houseName = "House Name"
     const houseId = "123 123 123"
     const MyHoming = "MyHoming"
+
+    const handleComprasPress = () => {
+        navigation.navigate('List');   
+      };
+
+    const handleReceive = () => {
+        navigation.navigate('List');   
+    };
+
+    const handlePay = () => {
+        navigation.navigate('Ledger');
+    };
 
 
     return (
@@ -44,13 +56,7 @@ export default function Dashboard() {
                             />
                             <Text style={styles.addExpenseText}>Contas</Text>
                         </Pressable>
-                        <Pressable style={[styles.addExpenseButton, { backgroundColor: CONST.lightGrey }]}>
-                            <ShoppingCart
-                                size="20"
-                                color="#000"
-                            />
-                            <Text style={styles.addExpenseText} >Compras</Text>
-                        </Pressable>
+                            <Button title="Compras" onPress={handleComprasPress} />
                     </View>
                 </View>
                 <View >
@@ -89,40 +95,13 @@ export default function Dashboard() {
                 </View>
                 
 
-                <View style={{ margin: 10 }}
-                >
+                <View style={{ margin: 10 }}>
 
-                    <Text style={styles.title}>Acertos</Text>
-
-                    <View style={styles.cardPayments}>
-                        <View style={styles.linePayments}>
-                            <Text>Gonçalo Dias</Text>
-                            <ArrowRight
-                                style={styles.arrowPayments}
-                                size="32"
-                                color="#FF8A65" />
-                            <Text>Carolina Matias</Text>
-                        </View>
-                        <View style={styles.linePayments}>
-                            <Text>Tiago Bartolomeu</Text>
-                            <ArrowRight
-                                style={styles.arrowPayments}
-                                size="32"
-                                color="#FF8A65" />
-                            <Text>Carolina Matias</Text>
-                        </View>
-                        <View style={styles.linePayments}>
-                            <Text>Tiago Bartolomeu</Text>
-                            <ArrowRight
-                                style={styles.arrowPayments}
-                                size="32"
-                                color="#FF8A65" />
-                            <Text>Sandra Antunes</Text>
-                        </View>
+                    <Text style={styles.title}>Acertos de contas</Text>
+                    <View style={styles.addExpense}>
+                        <Button title="Por receber" onPress={handleReceive} />
+                        <Button title="Por pagar" onPress={handlePay} />
                     </View>
-
-
-
                 </View>
 
 
@@ -133,9 +112,6 @@ export default function Dashboard() {
         </SafeAreaProvider>
     )
 
+}
 
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 3a12db79c40c43493d8834f366a05d5c634d1427
+export default Dashboard;
