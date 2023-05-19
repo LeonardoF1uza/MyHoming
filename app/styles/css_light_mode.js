@@ -4,49 +4,26 @@ import { StyleSheet } from "react-native";
 import * as CONST from "./constants.js";
 
 export const styles = StyleSheet.create({
-    
-
-    // navbar
-/*
-    navbar: {
-        backgroundColor: '#f2f2f2',
-        height: 60,
-        borderBottomWidth: 1,
-        borderBottomColor: '#ccc',
-        positionRelative: "down"
-        
-      },
-      navbarText : {
-        fontSize: 20,
-        fontWeight: 'bold',
-        color: '#333',
-      },
-
-<View style={styles.nameHouseId}>
-      <Text>{houseName}</Text>
-      <Text>{houseId}</Text>
-  </View>
 
 
-      */
-      
+
 
     //dashboard
     header: {
-        flexDirection:'row',
+        flexDirection: 'row',
         paddingLeft: 20,
         paddingRight: 20,
         paddingBottom: 10,
         backgroundColor: "#000"
     },
-    nameHouseId:{
+    nameHouseId: {
     },
-    headerText:{
+    headerText: {
         fontSize: 24,
         paddingBottom: 10,
         fontWeight: 'bold',
     },
-    headerSubtext:{
+    headerSubtext: {
         fontSize: 14,
         paddingLeft: 20,
         paddingBottom: 10,
@@ -77,8 +54,8 @@ export const styles = StyleSheet.create({
         borderWidth: 1,
     },
     imageMembers: {
-        width: CONST.screenWidth/3,
-        height: CONST.screenWidth/3,
+        width: CONST.screenWidth / 3,
+        height: CONST.screenWidth / 3,
         borderRadius: 10
 
     },
@@ -90,8 +67,18 @@ export const styles = StyleSheet.create({
         borderColor: CONST.blackColor,
         borderRadius: 10,
         borderWidth: 1,
-        
+
     },
+
+    addExpenseAcertos: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        marginBottom: 20,
+        marginTop: 20,
+        marginBottom: 10
+    },
+
     addExpense: {
         flex: 1,
         flexDirection: 'row',
@@ -103,8 +90,24 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     arrowPayments: {
+        paddingTop: 12,
+        paddingBottom: 12,
+        paddingLeft: 20,
+        paddingRight: 20,
 
     },
+
+    addExpenseButton2: {
+        backgroundColor: CONST.lightBlue,
+        borderRadius: 12,
+        paddingTop: 12,
+        paddingBottom: 12,
+        paddingLeft: 20,
+        paddingRight: 20,
+        flexDirection: 'row',
+    },
+
+
     addExpenseButton: {
         backgroundColor: CONST.lightBlue,
         borderRadius: 12,
@@ -119,6 +122,77 @@ export const styles = StyleSheet.create({
         fontWeight: '600',
         fontSize: CONST.buttonTextSize
     },
+    //popup dashboard
+
+    popcontainerView: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingHorizontal: 16,
+        
+    },
+    popcontainerViewMain: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingHorizontal: 16,
+        alignItems: 'center',
+
+        
+        
+        
+    },
+    popcontainerViewElem: {
+        
+        borderRadius: 12,
+        paddingTop: 12,
+        paddingBottom: 12,
+        paddingLeft: 20,
+        paddingRight: 20,
+    },
+
+    
+
+
+    popcontainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+
+    popopenButton: {
+        backgroundColor: '#2196F3',
+        padding: 10,
+        marginBottom: 20, color: 'white'
+    },
+
+    popmodalContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'rgba(0, 0, 0, 0.5)'
+    },
+
+    popmodalContent: {
+        backgroundColor: 'white',
+        padding: 20,
+        borderRadius: 10,
+        alignItems: 'center'
+    },
+
+    popmodalText: {
+        marginBottom: 20,
+        fontSize: 18,
+        textAlign: 'center'
+    },
+    popcloseButton:
+    {
+        backgroundColor: '#2196F3',
+        padding: 10,
+        color: 'white'
+    },
+
+
 
     //login
 
@@ -161,7 +235,7 @@ export const styles = StyleSheet.create({
         paddingTop: 80,
         paddingHorizontal: 20,
     },
-      sectionTitle: {
+    sectionTitle: {
         fontSize: 24,
         fontWeight: 'bold',
         flexDirection: 'row',
@@ -200,5 +274,5 @@ export const styles = StyleSheet.create({
     addText: {},
     header: {
         flexDirection: 'row',
-  }
+    }
 })
