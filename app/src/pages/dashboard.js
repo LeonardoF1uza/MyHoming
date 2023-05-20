@@ -4,15 +4,15 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import { Text, View, ScrollView, Image, TouchableOpacity, Modal, StyleSheet, Container, Pressable, Button } from "react-native";
 import { Header } from "react-native-elements";
 import {
-    MoneyRecive, ShoppingCart, ArrowRight
+    MoneyRecive, ShoppingCart, ArrowRight, MoneySend, DocumentText
 } from "iconsax-react-native";
 
-import { styles } from "./../styles/css_light_mode.js";
-import * as CONST from "./../styles/constants.js";
+import { styles } from "./../../styles/css_light_mode.js";
+import * as CONST from "./../../styles/constants.js";
 
 
 
-const Dashboard = ({ navigation }) => {
+const DashboardScreen = ({ navigation }) => {
     const houseName = "House Name"
     const houseId = "123 123 123"
     const MyHoming = "MyHoming"
@@ -60,15 +60,17 @@ const Dashboard = ({ navigation }) => {
                     <Text style={styles.title}>Adicionar Despesa</Text>
                     <View style={styles.addExpense}>
                         <Pressable style={styles.addExpenseButton}>
-                            <MoneyRecive
-                                size="20"
+
+                            <DocumentText
+                                size="25"
                                 color="#000"
                             />
+
                             <Text style={styles.addExpenseText}>Contas</Text>
                         </Pressable>
                         <Pressable onPress={handleComprasPress} style={[styles.addExpenseButton, { backgroundColor: CONST.lightGrey }]}>
                             <ShoppingCart
-                                size="20"
+                                size="25"
                                 color="#000"
                             />
                             <Text style={styles.addExpenseText} >Compras</Text>
@@ -83,7 +85,7 @@ const Dashboard = ({ navigation }) => {
                         <View style={styles.cardMembers}>
                             <Pressable onPress={() => setModalVisible1(true)}>
                                 <Image style={styles.imageMembers}
-                                    source={require("./../resources/images/inclino1.jpg")}
+                                    source={require("./../../resources/images/inclino1.jpg")}
                                     resizeMode="cover"
                                 />
                                 <Text>Carolina Matias</Text>
@@ -93,7 +95,7 @@ const Dashboard = ({ navigation }) => {
                         <View style={styles.cardMembers}>
                             <Pressable onPress={() => setModalVisible2(true)}>
                                 <Image style={styles.imageMembers}
-                                    source={require("./../resources/images/inclino2.jpg")}
+                                    source={require("./../../resources/images/inclino2.jpg")}
                                     resizeMode="cover"
                                 />
                                 <Text>Tiago Bartolomeu</Text>
@@ -102,7 +104,7 @@ const Dashboard = ({ navigation }) => {
                         <View style={styles.cardMembers}>
                             <Pressable onPress={() => setModalVisible3(true)}>
                                 <Image style={styles.imageMembers}
-                                    source={require("./../resources/images/inclino3.jpg")}
+                                    source={require("./../../resources/images/inclino3.jpg")}
                                     resizeMode="cover"
                                 />
                                 <Text>Sandra Antunes</Text>
@@ -111,7 +113,7 @@ const Dashboard = ({ navigation }) => {
                         <View style={styles.cardMembers}>
                             <Pressable onPress={() => setModalVisible4(true)}>
                                 <Image style={styles.imageMembers}
-                                    source={require("./../resources/images/inclino4.jpg")}
+                                    source={require("./../../resources/images/inclino4.jpg")}
                                     resizeMode="cover"
                                 />
                                 <Text>Gonçalo Dias</Text>
@@ -122,51 +124,32 @@ const Dashboard = ({ navigation }) => {
                 <Text style={[styles.title, { marginLeft: 10 }]}>Acertos de contas</Text>
 
 
-                <View style={styles.cardPayments}>
-                    <View style={styles.linePayments}>
-                        <Text>Gonçalo Dias</Text>
-                        <ArrowRight
-                            style={styles.arrowPayments}
-                            size="32"
-                            color="#FF8A65" />
-                        <Text>Carolina Matias (5)</Text>
-                    </View>
-                    <View style={styles.linePayments}>
-                        <Text>Tiago Bartolomeu</Text>
-                        <ArrowRight
-                            style={styles.arrowPayments}
-                            size="32"
-                            color="#FF8A65" />
-                        <Text>Carolina Matias (5)</Text>
-                    </View>
-                    <View style={styles.linePayments}>
-                        <Text>Tiago Bartolomeu</Text>
-                        <ArrowRight
-                            style={styles.arrowPayments}
-                            size="32"
-                            color="#FF8A65" />
-                        <Text>Sandra Antunes (5)</Text>
-                    </View>
+                    
 
                     <View style={styles.addExpense}>
                         <Pressable
                             onPress={handleReceive}
-                            style={[styles.addExpenseButton]
-                            }>
+                            style={[styles.addExpenseButton]}>
+                            <MoneyRecive
+                                size="25"
+                                color="#000"
+                            />
                             <Text style={styles.addExpenseText} >Por Receber</Text>
                         </Pressable>
 
                         <Pressable
                             onPress={handlePay}
-                            style={[styles.addExpenseButton2,]
-                            }>
+                            style={styles.addExpenseButton2}>
+                            <MoneySend
+                                size="25"
+                                color="#000"
+                            />
                             <Text style={styles.addExpenseText} >Por pagar</Text>
                         </Pressable>
 
                     </View>
 
 
-                </View>
 
                 <View style={styles.popcontainer}>
 
@@ -181,7 +164,7 @@ const Dashboard = ({ navigation }) => {
                                 <View style={styles.popcontainerViewMain}>
 
                                     <Image style={[styles.imageMembers, styles.popcontainerViewElem]}
-                                        source={require("./../resources/images/inclino1.jpg")}
+                                        source={require("./../../resources/images/inclino1.jpg")}
                                         resizeMode="cover" />
 
                                     <Text style={styles.popcontainerViewElem} >Carolina Matias</Text>
@@ -236,7 +219,7 @@ const Dashboard = ({ navigation }) => {
                                 <View style={styles.popcontainerViewMain}>
 
                                     <Image style={[styles.imageMembers, styles.popcontainerViewElem]}
-                                        source={require("./../resources/images/inclino2.jpg")}
+                                        source={require("./../../resources/images/inclino2.jpg")}
                                         resizeMode="cover" />
 
                                     <Text style={styles.popcontainerViewElem} >Tiago Bartolomeu</Text>
@@ -291,7 +274,7 @@ const Dashboard = ({ navigation }) => {
                                 <View style={styles.popcontainerViewMain}>
 
                                     <Image style={[styles.imageMembers, styles.popcontainerViewElem]}
-                                        source={require("./../resources/images/inclino3.jpg")} resizeMode="cover" />
+                                        source={require("./../../resources/images/inclino3.jpg")} resizeMode="cover" />
 
                                     <Text style={styles.popcontainerViewElem} >Sandra Antunes</Text>
                                 </View>
@@ -338,7 +321,7 @@ const Dashboard = ({ navigation }) => {
                                 <View style={styles.popcontainerViewMain}>
 
                                     <Image style={[styles.imageMembers, styles.popcontainerViewElem]}
-                                        source={require("./../resources/images/inclino4.jpg")} resizeMode="cover" />
+                                        source={require("./../../resources/images/inclino4.jpg")} resizeMode="cover" />
 
                                     <Text style={styles.popcontainerViewElem} >Gonçalo Dias</Text>
                                 </View>
@@ -382,4 +365,4 @@ const Dashboard = ({ navigation }) => {
 
 }
 
-export default Dashboard;
+export default DashboardScreen;

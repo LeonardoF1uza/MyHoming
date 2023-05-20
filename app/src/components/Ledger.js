@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, View,Text,Alert} from "react-native";
-import { styles } from "./../styles/css_light_mode.js";
+import { styles } from "../../styles/css_light_mode.js";
 import { FontAwesome } from 'react-native-vector-icons';
 
 function Ledger(props){
