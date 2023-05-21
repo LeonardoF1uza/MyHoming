@@ -5,59 +5,79 @@ import * as CONST from "./constants.js";
 
 export const styles = StyleSheet.create({
 
+    container: {
+        backgroundColor: "#333",
+        flex: 1,
+        paddingTop: 0,
+        paddingBottom: 100,
+    },
+    subContainer: {
+        backgroundColor: "#333",
+        flex: 1,
+        paddingTop: 50,
+        paddingBottom: 100,
+    },
+    containerView: {
+        backgroundColor: "#222", 
+        borderBottomLeftRadius: 25, 
+        borderBottomRightRadius: 25,
+        paddingBottom: 10,
+        shadowColor: CONST.blackColor,
+        shadowRadius: 3,
+        shadowOpacity: 1,
+        elevation: 3,
+    },
 
+    //---- CALENDAR ---
+    calendar: {
+        margin: 20,
+        marginTop: 70,
+        elevation:3,
+        borderRadius: 30,
+        height: 450,
+        backgroundColor: '#222',
+    },
 
 
     //dashboard
     header: {
-        flexDirection: 'row',
+        flexDirection: 'row', 
         paddingLeft: 20,
         paddingRight: 20,
-        paddingBottom: 10,
-        backgroundColor: "#000"
+        paddingBottom: 20,
+        marginBottom: 20,
+        paddingTop: 40,
+        justifyContent: 'space-between',
+        shadowColor: 'transparent',
+        shadowRadius: 3,
+        shadowOpacity: 1,
+        elevation: 10,
     },
-    nameHouseId: {
-    },
+
     headerText: {
-        fontSize: 24,
-        paddingBottom: 10,
-        fontWeight: 'bold',
+        fontWeight: '600',
+        fontSize: CONST.textSize,
+        textAlign: 'right',
+        color: CONST.whiteColor,
+        opacity: 0.8,
     },
-    headerSubtext: {
-        fontSize: 14,
-        paddingLeft: 20,
-        paddingBottom: 10,
-        text: "center",
+    headerId: {
+        fontWeight: '600',
+        fontSize: CONST.subtextSize,
+        textAlign: 'right',
+        color: CONST.darkBlue,
         fontStyle: 'italic',
-        fontWeight: 'normal',
-        flexDirection: 'row',
-        marginTop: 'auto',
-        marginBottom: 0
     },
     title: {
         fontSize: CONST.subtitleSize,
         fontWeight: '600',
-        marginBottom: 10,
-        marginTop: 10,
+        marginBottom: 20,
+        color: CONST.whiteColor
     },
 
     background: {
         paddingTop: 5,
         color: CONST.whiteColor,
-    },
-    cardMembers: {
-        padding: 20,
-        margin: 10,
-        marginRight: 5,
-        borderColor: CONST.blackColor,
-        borderRadius: 10,
-        borderWidth: 1,
-    },
-    imageMembers: {
-        width: CONST.screenWidth / 3,
-        height: CONST.screenWidth / 3,
-        borderRadius: 10
-
     },
 
     cardPayments: {
@@ -105,8 +125,119 @@ export const styles = StyleSheet.create({
         paddingLeft: 20,
         paddingRight: 20,
         flexDirection: 'row',
+        marginRight:0,
+        marginLeft: 'auto',
+        marginTop: CONST.screenHeight/4,
+
+        
+
+
+
     },
 
+    // --- Bills ----
+
+
+    billsContainerIconButtonCam:
+    {
+        justifyContent: 'center',
+        flexDirection: 'row',
+        alignItems: 'center',
+        margin: 5,
+        marginBottom: 45,
+       
+
+    },
+
+    billsContainerIcon: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 45,
+    },
+    billsContainerInput: {
+        
+        margin: 5,
+
+    },
+    biilsInput: {
+        borderRadius: 12,
+        height: 30, // Ajuste a altura desejada
+        borderColor: 'gray',
+        borderWidth: 1,
+        paddingHorizontal: 10,
+        fontSize: 14, // Ajuste o tamanho da fonte desejado
+        borderColor: '#000',
+    },
+
+
+
+    // --- BUTTON ----
+    primaryButton: {
+        borderRadius: CONST.borderRadiusButton,
+        paddingTop: CONST.paddingButtonVertical,
+        paddingBottom: CONST.paddingButtonVertical,
+        paddingLeft: CONST.paddingButtonHorizontal,
+        paddingRight: CONST.paddingButtonHorizontal,
+        flexDirection: 'row',
+        alignItems: 'center',
+        shadowColor: '#000',
+        shadowRadius: 3,
+        shadowOpacity: 1,
+        elevation: 1,
+    },
+    primaryButtonText: {
+        marginLeft: 10,
+        fontWeight: '600',
+        fontSize: CONST.buttonTextSize
+    },
+    // ---- CARDS ----
+    // ---- members ----
+    cardMembers: {
+        backgroundColor: "#333",
+        padding: CONST.paddingCardMembers,
+        marginRight: 10,
+        marginBottom: 5,
+        marginLeft: 10,
+        borderRadius: CONST.borderRadiusCard,
+        alignItems: 'center',
+        width: CONST.screenWidth / 5 * 2,
+        flexDirection: 'column',
+        shadowColor: '#000',
+        shadowRadius: 3,
+        shadowOpacity: 1,
+        elevation: 3,
+        overflow: "hidden",
+        
+        opacity: 1,
+    },
+    imageMembers: {
+        width: CONST.screenWidth / 3 - 15,
+        height: CONST.screenWidth / 3 - 15,
+        borderRadius: CONST.borderRadiusCard - 5,
+        marginBottom: 20,
+        opacity: 0.9
+    },
+    cardMembersText: {
+        fontWeight: '600',
+        fontSize: CONST.buttonTextSize,
+        textAlign: 'center',
+        color: CONST.whiteColor,
+        opacity: 0.6
+    },
+    areaBox: {
+        backgroundColor: CONST.pureWhite,
+        borderRadius: CONST.boxBorderRadius,
+        shadowColor: CONST.mainGray,
+        shadowRadius: CONST.shadowRadius,
+        shadowOpacity: 0.2,
+        elevation: 3,
+        overflow: "hidden",
+        width: CONST.screenWidth / 5 * 2,
+        height: 'auto',
+        flexDirection: 'column',
+        alignItems: 'center',
+        margin: 10 //TODO: to remove after
+    },
 
     addExpenseButton: {
         backgroundColor: CONST.lightBlue,
@@ -129,7 +260,7 @@ export const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         paddingHorizontal: 16,
-        
+
     },
     popcontainerViewMain: {
         flexDirection: 'row',
@@ -138,12 +269,12 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 16,
         alignItems: 'center',
 
-        
-        
-        
+
+
+
     },
     popcontainerViewElem: {
-        
+
         borderRadius: 12,
         paddingTop: 12,
         paddingBottom: 12,
@@ -151,7 +282,7 @@ export const styles = StyleSheet.create({
         paddingRight: 20,
     },
 
-    
+
 
 
     popcontainer: {
@@ -197,13 +328,6 @@ export const styles = StyleSheet.create({
     //login
 
 
-
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
     // title: {
     //     fontSize: 24,
     //     fontWeight: 'bold',
@@ -272,7 +396,5 @@ export const styles = StyleSheet.create({
         borderWidth: 1,
     },
     addText: {},
-    header: {
-        flexDirection: 'row',
-    }
+   
 })

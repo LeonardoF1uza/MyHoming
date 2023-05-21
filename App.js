@@ -1,5 +1,4 @@
 import React from 'react';
-import {View, Text} from 'react-native'
 
 import MainStackNavigation from "./app/src/navigation/routes"
 import { createStackNavigator } from "@react-navigation/stack";
