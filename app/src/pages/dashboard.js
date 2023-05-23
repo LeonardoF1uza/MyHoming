@@ -28,12 +28,12 @@ const DashboardScreen = ({ navigation }) => {
             <View style={styles.containerView}>
                 <View style={styles.header}>
                     <View style={{ flexDirection: 'column' }}>
-                        {/* <Image
+                        { <Image
                             style={{
                                 width: CONST.screenWidth/2, height: CONST.screenWidth/9,
                             }}
-                            source={require("./../../resources/images/logo.png")}
-                             />  */}
+                            source={require("./../../resources/images/logo2.png")}
+                             />  }
                     </View>
                     <View style={{ paddingTop: 25, alignItems: 'flex-end', alignSelf: 'flex-end', flexDirection: 'column' }}>
                         <Text style={styles.headerText}>{houseName}</Text>
