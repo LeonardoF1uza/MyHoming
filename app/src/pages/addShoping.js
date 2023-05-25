@@ -1,92 +1,78 @@
 import React, { useState } from 'react';
-import { TextInput, View, Pressable, Text, StyleSheet } from 'react-native';
+
+import { StatusBar } from "expo-status-bar";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import { Alert, TextInput, View, Pressable, Text, StyleSheet, ScrollView } from 'react-native';
 import {
     ShoppingCart, Camera
 
-} from "iconsax-react-native"
+} from "iconsax-react-native";
 
 import * as CONST from "./../../styles/constants.js";
 
 import { styles } from "./../../styles/css_light_mode.js";
 
-
-const BillsScreen = () => {
-    const [text, setText] = useState('');
-
-    const [text2, setText2] = useState('');
+import { PrimaryButton } from "../components/button.js";
+import { useNavigation } from "@react-navigation/native";
 
 
 
-    const handleTextChange = (newText) => {
-        setText(newText);
-    };
-    const handleTextChange2 = (newText2) => {
-        setText2(newText2);
-    };
+const ShoppingScreen = ({ navigation }) => {
+
+    const [total, setTotal] = useState('');
+    const [description, setDescription] = useState('');
+    const handleAddShopping = () => {
+        console.log('handleAddShopping called');
+        Alert.alert("Atenção", "Tem a certeza que deseja adicionar compra?", [
+          { text: "Cancelar" },
+          {
+            text: "Confirmar",
+            onPress: () => {
+              navigation.navigate("HomeDashboard");
+            },
+          },
+        ]);
+      };
 
     return (
-        <View style={styles.subContainer} >
-            <View>
-                <View style={styles.billsContainerTop}>
-                    <View style={styles.billsContainerIcon}>
-                        <ShoppingCart
-                            size="150"
-                            color={CONST.darkBlue}
-                        />
-                    </View>
+        <SafeAreaProvider style={styles.subContainer_2} >
+        <StatusBar style="ligth" />
+        <ScrollView style={{flexDirection: 'column', marginTop: 0, marginLeft: 20, marginRight: 20, marginBottom: 30}}>
 
-                </View>
-
-
-                <View >
-
-                    <View style={styles.billsContainerInput}>
-                        <TextInput
-                            style={styles.biilsInput}
-                            placeholder="Valor total de conta"
-                            value={text}
-                            onChangeText={handleTextChange}
-                            keyboardType="numeric"
-                        />
-                    </View>
-                    
-                    <View style={styles.billsContainerInput}>
-                        <TextInput
-                            style={styles.biilsInput}
-                            placeholder="Descrição (opcional)"
-                            value={text2}
-                            onChangeText={handleTextChange2}
-                        />
-
-                    </View>
-                    <View style={styles.billsContainerInput}>
-                        <Pressable style={styles.addExpenseButton}>
-
-                            <Text style={styles.addExpenseText} >Adicionar compra</Text>
-                        </Pressable>
-                    </View>
-
-                </View>
+            <View style={styles.billsContainerIcon}>
+                <ShoppingCart size="150" color={CONST.darkBlue} />
             </View>
+                <TextInput
+                    style={styles.billsInput}
+                    placeholder="Valor total de conta"
+                    placeholderTextColor={CONST.lightGrey}
+                    value={total}
+                    onChangeText={newTotal => setTotal(newTotal)}
+                    keyboardType="numeric"
+                />
+               
+                <TextInput
+                    style={styles.billsInput}
+                    placeholderTextColor={CONST.lightGrey}
+                    placeholder="Descrição (opcional)"
+                    value={description}
+                    onChangeText={newDescription => setDescription(newDescription)}
+                />
+             <Pressable
+                 style={{ flexDirection: 'row', justifyContent: 'space-around', marginTop: 10 }}>
+                <PrimaryButton text="Foto" type="camera" color={CONST.lightGrey} />
+            </Pressable>
+            <Pressable
+                    onPress={handleAddShopping}
+                    style={{ flexDirection: 'row', justifyContent: 'space-around', marginTop: 30 }}>
+                    <PrimaryButton text="Adicionar conta" type="add" color={CONST.lightBlue} />
+                </Pressable >
+            </ScrollView>
 
-            <View >
-
-                <View style={styles.billsContainerIconButtonCam}>
-                    <Pressable style={[styles.addExpenseButton2, {backgroundColor: CONST.lightGrey}]}>
-                        <Camera
-                            size="25"
-                            color='#000'
-                        />
-                    </Pressable>
-
-                </View>
-
-            </View>
-
-        </View>
+        </SafeAreaProvider>
     );
 };
 
 
 
-export default BillsScreen;
+export default ShoppingScreen;

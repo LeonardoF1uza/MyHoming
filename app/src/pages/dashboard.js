@@ -19,9 +19,6 @@ const DashboardScreen = ({ navigation }) => {
     const houseName = "Apartamento 1ºD"
     const houseId = "582.006.271"
 
-    const [modalVisible1, setModalVisible1] = useState(false);
-
-   
     return (
         <SafeAreaProvider style={styles.container} >
             <StatusBar style="ligth" />
@@ -35,14 +32,14 @@ const DashboardScreen = ({ navigation }) => {
                             source={require("./../../resources/images/logo2.png")}
                              />  }
                     </View>
-                    <View style={{ paddingTop: 25, alignItems: 'flex-end', alignSelf: 'flex-end', flexDirection: 'column' }}>
+                    <View style={{ paddingTop: 40, alignItems: 'flex-end', alignSelf: 'flex-end', flexDirection: 'column' }}>
                         <Text style={styles.headerText}>{houseName}</Text>
                         <Text style={styles.headerId}>{houseId}</Text>
                     </View>
 
                 </View>
 
-                <View style={{ marginBottom: 30, marginTop: 10 }}>
+                <View style={{ marginBottom: 30, marginTop: 0 }}>
                     {/* <Text style={[styles.title, { marginLeft: 20 }]}>Inquilinos</Text> */}
                     <ScrollView
                         horizontal={true}

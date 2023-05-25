@@ -9,13 +9,19 @@ export const styles = StyleSheet.create({
         backgroundColor: "#333",
         flex: 1,
         paddingTop: 0,
-        paddingBottom: 100,
+        paddingBottom: 80,
     },
     subContainer: {
         backgroundColor: "#333",
         flex: 1,
         paddingTop: 50,
-        paddingBottom: 100,
+        paddingBottom: 80,
+    },
+    subContainer_2: {
+        backgroundColor: "#333",
+        flex: 1,
+        paddingTop: 0,
+        paddingBottom: 80,
     },
     containerView: {
         backgroundColor: "#222", 
@@ -150,23 +156,25 @@ export const styles = StyleSheet.create({
     },
 
     billsContainerIcon: {
-        justifyContent: 'center',
         alignItems: 'center',
         marginBottom: 45,
     },
     billsContainerInput: {
-        
-        margin: 5,
-
+        marginTop: 10,
+        marginBottom: 10,
+        marginLeft: 20,
+        marginRight: 20,        
     },
-    biilsInput: {
-        borderRadius: 12,
-        height: 30, // Ajuste a altura desejada
-        borderColor: 'gray',
+    billsInput: {
+        marginBottom: 10,
+        borderRadius: 6,
+        height: 40, // Ajuste a altura desejada
+        borderColor: "#222",
+        color: CONST.lightGrey,
         borderWidth: 1,
+        backgroundColor: "#444",
         paddingHorizontal: 10,
         fontSize: 14, // Ajuste o tamanho da fonte desejado
-        borderColor: '#000',
     },
 
 
@@ -325,14 +333,7 @@ export const styles = StyleSheet.create({
 
 
 
-    //login
-
-
-    // title: {
-    //     fontSize: 24,
-    //     fontWeight: 'bold',
-    //     marginBottom: 30,
-    // },
+    
     inputContainer: {
         width: '80%',
         marginBottom: 20,

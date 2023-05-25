@@ -97,7 +97,7 @@ function Icon({ name }) {
         case "lists":
             return <View style={{alignItems: 'center'}}>
             <ClipboardText size="25" color="#DDD" />
-            <Text style={{fontSize: 12, color: "#FFF"}}>Listas</Text>
+            <Text style={{fontSize: 12, color: "#FFF"}}>Tarefas</Text>
             </View>;
         case "profile":
             return <View style={{alignItems: 'center'}}>
@@ -131,7 +131,7 @@ const TabRoutes = ({}) => {
                     height: 60,
                     position: "absolute",
                     elevation: 0,
-                    opacity: 0.8,
+                    opacity: 1,
                 },
             }}
         >
